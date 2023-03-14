@@ -7,7 +7,7 @@ interface Props {
 const { title, counter } = Astro.props;
 ---
 
-<div class="gap-2 text-center py-10 h-96 flex flex-col items-center justify-center w-full">
+<div class="gap-2 text-center py-10 h-32 sm:h-96 flex flex-col items-center justify-center w-full">
   <div class="flex items-center justify-center">
     <div class="flex items-center mr-2">
       <svg
@@ -30,6 +30,6 @@ const { title, counter } = Astro.props;
     </div>
   </div>
   <div>
-    <h2 class="font-montserrat font-extralight text-lg">{title}</h2>
+    <h2 class="font-montserrat font-extralight text-lg uppercase">{title}</h2>
   </div>
 </div>
