@@ -1,0 +1,1168 @@
+---
+import "../styles/Layout.css";
+
+//components
+import Header from "../components/Header.astro";
+import Card from "../components/Card.astro";
+import AboutUs from "../components/AboutUs.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>WEDDINGS-POST-TALES</title>
+  </head>
+  <body>
+    <main>
+      <!-- slider section -->
+
+      <div class="slider bg-zinc-900">
+        <!-- header component -->
+
+        <div class="slider-slides">
+          <div class="slider-slide active">
+            <img src="slider1.jpg" alt="wedding image" />
+          </div>
+          <div class="slider-slide" id="slide-id-2">
+            <img src="slider2.jpg" alt="wedding image" />
+          </div>
+          <div class="slider-slide">
+            <img src="slider3.jpg" alt="wedding image" />
+          </div>
+          <div class="slider-slide" id="slide-id-4">
+            <img src="slider4.jpg" alt="wedding image" />
+          </div>
+        </div>
+        <div
+          class="slider-btns absolute top-1/2 w-full px-8 flex justify-between"
+        >
+          <!-- left click -->
+          <i
+            class="fa-solid fa-angle-left text-6xl text-white hover:text-gray-300 cursor-pointer prev"
+          ></i>
+          <!-- right click -->
+          <i
+            class="fa-solid fa-angle-right text-6xl text-white hover:text-gray-300 cursor-pointer next"
+          ></i>
+        </div>
+        <div>
+          <Header />
+        </div>
+      </div>
+
+      <!-- work section -->
+
+      <section id="work" class="w-11/12 mx-auto mt-8">
+        <h2
+          class="font-montserrat font-bold tracking-wider text-4xl ml-12 my-14"
+        >
+          WORK
+        </h2>
+        <section class="sm:grid grid-cols-2">
+          <Card title="Victoria and John" counter={1} />
+
+          <!-- Thumbnail 1 -->
+
+          <div
+            class="gap-2 text-center w-full h-96 flex flex-col items-center justify-center relative overflow-hidden"
+          >
+            <div class="w-full h-full">
+              <img
+                class="h-full object-cover hover:opacity-70 transform transition duration-500 ease-out object-center"
+                src="thumbnail1.png"
+                alt="wedding image"
+              />
+            </div>
+            <div
+              class="flex items-center justify-center h-full absolute top-0 left-50"
+            >
+              <i
+                id="playBtn1"
+                class="fa-regular fa-circle-play cursor-pointer text-6xl hover:scale-110 transition duration-500 ease-in-out"
+              ></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- video 1 section -->
+
+        <section class="flex justify-center relative">
+          <div
+            id="video1"
+            class="w-5/6 hidden absolute top-0 md:w-3/4"
+            style="padding:56.21% 0 0 0;position:relative;"
+          >
+            <i
+              id="closeBtn1"
+              class="fa-regular fa-circle-xmark md:text-2xl cursor-pointer z-30 absolute top-0 right-0 hover:scale-110 transition duration-500 ease-in-out"
+            ></i>
+
+            <iframe
+              id="vimeo-player1"
+              src="https://player.vimeo.com/video/675492896?h=0655bb8f2f&title=0&byline=0"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+
+        <section class="sm:grid grid-cols-2">
+          <!-- Thumbnail 2 -->
+
+          <div
+            class="gap-2 text-center w-full h-96 flex flex-col items-center justify-center relative overflow-hidden"
+          >
+            <div class="w-full h-full">
+              <img
+                class="h-full object-cover hover:opacity-70 transform transition duration-500 ease-out object-center"
+                src="thumbnail2.png"
+                alt="wedding image"
+              />
+            </div>
+            <div
+              class="flex items-center justify-center h-full absolute top-0 left-50"
+            >
+              <i
+                id="playBtn2"
+                class="fa-regular fa-circle-play cursor-pointer text-6xl hover:scale-110 transition duration-500 ease-in-out"
+              ></i>
+            </div>
+          </div>
+
+          <Card title="Tatiana and Mike" counter={2} />
+        </section>
+
+        <!-- video 2 section -->
+
+        <section class="flex justify-center relative">
+          <div
+            id="video2"
+            class="w-5/6 md:w-3/4 hidden absolute top-0"
+            style="padding:42.5% 0 0 0;position:relative;"
+          >
+            <i
+              id="closeBtn2"
+              class="fa-regular fa-circle-xmark md:text-2xl cursor-pointer z-30 absolute top-0 right-0 hover:scale-110 transition duration-500 ease-in-out"
+            ></i>
+
+            <iframe
+              id="vimeo-player2"
+              src="https://player.vimeo.com/video/735830087?h=68e2ae6084&title=0"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+
+        <section class="sm:grid grid-cols-2">
+          <Card title="Kary and Jeddy" counter={3} />
+
+          <!-- Thumbnail 3 -->
+
+          <div
+            class="gap-2 text-center w-full h-96 flex flex-col items-center justify-center relative overflow-hidden"
+          >
+            <div class="w-full h-full">
+              <img
+                class="h-full object-cover hover:opacity-70 transform transition duration-500 ease-out object-center"
+                src="thumbnail3.png"
+                alt="wedding image"
+              />
+            </div>
+            <div
+              class="flex items-center justify-center h-full absolute top-0 left-50"
+            >
+              <i
+                id="playBtn3"
+                class="fa-regular fa-circle-play cursor-pointer text-6xl hover:scale-110 transition duration-500 ease-in-out"
+              ></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- video 3 section -->
+
+        <section class="flex justify-center relative">
+          <div
+            id="video3"
+            class="w-5/6 md:w-3/4 hidden absolute top-0"
+            style="padding:56.25% 0 0 0;position:relative;"
+          >
+            <i
+              id="closeBtn3"
+              class="fa-regular fa-circle-xmark md:text-2xl cursor-pointer z-30 absolute top-0 right-0 hover:scale-110 transition duration-500 ease-in-out"
+            ></i>
+
+            <iframe
+              id="vimeo-player3"
+              src="https://player.vimeo.com/video/650116226?h=98dda0a2b4&color=9CB4C6&title=0&byline=0&portrait=0"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+
+        <section class="sm:grid grid-cols-2">
+          <!-- Thumbnail 4 -->
+
+          <div
+            class="gap-2 text-center w-full h-96 flex flex-col items-center justify-center relative overflow-hidden"
+          >
+            <div class="w-full h-full">
+              <img
+                class="h-full object-cover hover:opacity-70 transform transition duration-500 ease-out object-center"
+                src="thumbnail4.png"
+                alt="wedding image"
+              />
+            </div>
+            <div
+              class="flex items-center justify-center h-full absolute top-0 left-50"
+            >
+              <i
+                id="playBtn4"
+                class="fa-regular fa-circle-play cursor-pointer text-6xl hover:scale-110 transition duration-500 ease-in-out"
+              ></i>
+            </div>
+          </div>
+
+          <Card title="Kahlana and Dwayne" counter={4} />
+        </section>
+
+        <!-- video 4 section -->
+
+        <section class="flex justify-center relative">
+          <div
+            id="video4"
+            class="w-5/6 md:w-3/4 hidden absolute top-0"
+            style="padding:56.25% 0 0 0;position:relative;"
+          >
+            <i
+              id="closeBtn4"
+              class="fa-regular fa-circle-xmark md:text-2xl cursor-pointer z-30 absolute top-0 right-0 hover:scale-110 transition duration-500 ease-in-out"
+            ></i>
+
+            <iframe
+              id="vimeo-player4"
+              src="https://player.vimeo.com/video/650113566?h=927d4bd6ce&color=9cb4c6&title=0&byline=0&portrait=0"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+
+        <section class="sm:grid grid-cols-2">
+          <Card title="Tahlia and Ryan" counter={5} />
+
+          <!-- Thumbnail 5 -->
+
+          <div
+            class="gap-2 text-center w-full h-96 flex flex-col items-center justify-center relative overflow-hidden"
+          >
+            <div class="w-full h-full">
+              <img
+                class="h-full object-cover hover:opacity-70 transform transition duration-500 ease-out object-center"
+                src="thumbnail5.png"
+                alt="wedding image"
+              />
+            </div>
+            <div
+              class="flex items-center justify-center h-full absolute top-0 left-50"
+            >
+              <i
+                id="playBtn5"
+                class="fa-regular fa-circle-play cursor-pointer text-6xl hover:scale-110 transition duration-500 ease-in-out"
+              ></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- video 5 section -->
+
+        <section class="flex justify-center relative">
+          <div
+            id="video5"
+            class="w-5/6 md:w-3/4 hidden absolute top-0"
+            style="padding:56.25% 0 0 0;position:relative;"
+          >
+            <i
+              id="closeBtn5"
+              class="fa-regular fa-circle-xmark md:text-2xl cursor-pointer z-30 absolute top-0 right-0 hover:scale-110 transition duration-500 ease-in-out"
+            ></i>
+
+            <iframe
+              id="vimeo-player5"
+              src="https://player.vimeo.com/video/777649919?h=b4f6ded00e&title=0"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+
+        <section class="sm:grid grid-cols-2">
+          <!-- Thumbnail 6 -->
+
+          <div
+            class="gap-2 text-center w-full h-96 flex flex-col items-center justify-center relative overflow-hidden"
+          >
+            <div class="w-full h-full">
+              <img
+                class="h-full object-cover hover:opacity-70 transform transition duration-500 ease-out object-center"
+                src="thumbnail6.png"
+                alt="wedding image"
+              />
+            </div>
+            <div
+              class="flex items-center justify-center h-full absolute top-0 left-50"
+            >
+              <i
+                id="playBtn6"
+                class="fa-regular fa-circle-play cursor-pointer text-6xl hover:scale-110 transition duration-500 ease-in-out"
+              ></i>
+            </div>
+          </div>
+
+          <Card title="Alex and Clark" counter={6} />
+        </section>
+
+        <!-- video 6 section -->
+
+        <section class="flex justify-center relative">
+          <div
+            id="video6"
+            class="w-5/6 md:w-3/4 hidden absolute top-0"
+            style="padding:56.25% 0 0 0;position:relative;"
+          >
+            <i
+              id="closeBtn6"
+              class="fa-regular fa-circle-xmark md:text-2xl cursor-pointer z-30 absolute top-0 right-0 hover:scale-110 transition duration-500 ease-in-out"
+            ></i>
+
+            <iframe
+              id="vimeo-player6"
+              src="https://player.vimeo.com/video/675497240?h=ae27baabd4&title=0&byline=0"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+
+        <section class="sm:grid grid-cols-2">
+          <Card title="Marcela and Brandon" counter={7} />
+
+          <!-- Thumbnail 7 -->
+
+          <div
+            class="gap-2 text-center w-full h-96 flex flex-col items-center justify-center relative overflow-hidden"
+          >
+            <div class="w-full h-full">
+              <img
+                class="h-full object-cover hover:opacity-70 transform transition duration-500 ease-out object-center"
+                src="thumbnail7.png"
+                alt="wedding image"
+              />
+            </div>
+            <div
+              class="flex items-center justify-center h-full absolute top-0 left-50"
+            >
+              <i
+                id="playBtn7"
+                class="fa-regular fa-circle-play cursor-pointer text-6xl hover:scale-110 transition duration-500 ease-in-out"
+              ></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- video 7 section -->
+
+        <section class="flex justify-center relative">
+          <div
+            id="video7"
+            class="w-5/6 md:w-3/4 hidden absolute top-0"
+            style="padding:56.25% 0 0 0;position:relative;"
+          >
+            <i
+              id="closeBtn7"
+              class="fa-regular fa-circle-xmark md:text-2xl cursor-pointer z-30 absolute top-0 right-0 hover:scale-110 transition duration-500 ease-in-out"
+            ></i>
+
+            <iframe
+              id="vimeo-player7"
+              src="https://player.vimeo.com/video/650119201?h=41575f505a&color=9CB4C6&title=0&byline=0&portrait=0"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              allowfullscreen></iframe>
+          </div><script src="https://player.vimeo.com/api/player.js"></script>
+        </section>
+      </section>
+
+      <!-- about section -->
+
+      <section id="about" class="w-11/12 mx-auto mt-8">
+        <h2
+          class="font-montserrat font-bold tracking-wider text-4xl ml-12 my-14 uppercase"
+        >
+          About us
+        </h2>
+        <section
+          class="min-h-96"
+          style="background-image: url('about.jpg'); background-size: cover; background-position: center center;"
+        >
+          <div class="flex flex-col p-20 sm:grid grid-cols-2">
+            <div>
+              <h2
+                class="text-4xl text-center sm:text-left md:text-6xl lg:text-7xl xl:text-9xl text-white uppercase font-extrabold md:pt-12"
+              >
+                Hello
+              </h2>
+              <p
+                class="text-white text-center sm:text-left lg:text-4xl uppercase font-extrabold"
+              >
+                Some words about us
+              </p>
+            </div>
+            <div class="flex items-center mt-10 sm:mt-0 sm:pl-2 md:pl-10">
+              <p
+                class="text-white font-light text-center sm:text-right text-xs md:text-base"
+              >
+                POST-TALES Weddings, where we tell stories differently. We
+                believe that the best way to preserve the memories of your
+                special day is to capture the raw emotions, the real moments and
+                the deep connections that make your love story truly unique.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="h-416 overflow-auto sm:h-96 md:h-72 md:overflow-hidden lg:h-60"
+        >
+          <AboutUs />
+        </section>
+      </section>
+
+      <!-- services section -->
+
+      <section id="services" class="w-11/12 mx-auto mt-8">
+        <section>
+          <h2
+            class="font-montserrat font-bold tracking-wider text-4xl ml-12 my-14 uppercase"
+          >
+            SERVICES
+          </h2>
+          <div
+            class="opacity-70 py-10 lg:py-40"
+            style="background-image: url('service1.jpg'); background-size: cover;  background-position: center center;"
+          >
+            <h2
+              class="text-center text-4xl text-white uppercase font-montserrat font-bold py-4 sm:py-12 tracking-wider"
+            >
+              What we do
+            </h2>
+            <div class="md:grid grid-cols-2">
+              <div class="flex flex-row w-3/4 gap-4 mx-auto pb-10 md:pb-0">
+                <div>
+                  <p
+                    class="text-white text-right text-xs sm:text-sm tracking-wide"
+                  >
+                    <span class="font-bold">Capturing the Real Emotions:</span> We
+                    believe in capturing the raw emotions, real moments, and deep
+                    connections that make your love story unique. Our team of wedding
+                    video creatives uses film techniques and high-level resources
+                    to create emotionally charged films that showcase the true essence
+                    of your relationship and the events of your wedding day.
+                  </p>
+                </div>
+                <div class="my-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-12 h-12 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex w-3/4 gap-4 mx-auto">
+                <div class="my-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-12 h-12 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <p
+                    class="text-white text-left text-xs sm:text-sm tracking-wide"
+                  >
+                    <span class="font-bold"
+                      >Creating Unconventional Wedding Films:</span
+                    > At Post-tales Weddings, we refuse to conform to standard, cheesy,
+                    and romantic narratives. Instead, we strive to create films that
+                    are anti-romantic but deeply emotive, showcasing your wedding
+                    story in a way that is truly representative of you. Our goal
+                    is to provide you with a stunning, unforgettable film that you
+                    will cherish for a lifetime.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-10 text-center">
+              <a
+                href="#contact"
+                class="bg-transparent border-2 border-white text-white uppercase py-2 px-4 transition duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-md"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </section>
+        <section class="mx-auto">
+          <h2
+            class="text-center text-4xl text-zinc-900 uppercase font-montserrat font-bold py-12 tracking-wider"
+          >
+            What we offer
+          </h2>
+          <div class="flex flex-col gap-4 md:grid grid-cols-3">
+            <div class="text-justify px-2">
+              <div>
+                <img
+                  class="mx-auto"
+                  src="offer1.png"
+                  alt="Flag of Puerto Rico"
+                />
+              </div>
+
+              <h3
+                class="text-center my-3 text-lg font-light font-montserrat tracking-wider uppercase"
+              >
+                Puerto Rico
+              </h3>
+
+              <p class="text-zinc-500 text-sm leading-6 text-center">
+                Anti-romantic yet deeply emotional wedding
+              </p>
+              <p class="text-zinc-500 text-sm leading-6 text-center">
+                cinematography in Puerto Rico.
+              </p>
+              <p class="text-zinc-500 text-sm leading-6 text-center">
+                At POST-TALES, we capture genuine, heartfelt moments to tell
+                your story in a one-of-a-kind, creative way.
+              </p>
+            </div>
+            <div class="text-justify px-2">
+              <div>
+                <img class="mx-auto" src="offer2.png" alt="destination" />
+              </div>
+              <h3
+                class="text-center my-3 text-lg font-light font-montserrat tracking-wider uppercase"
+              >
+                Destination
+              </h3>
+              <p class="text-zinc-500 text-sm leading-6 text-center">
+                Destination weddings around the world.
+              </p>
+              <p class="text-zinc-500 text-sm leading-6 text-center">
+                At POST-TALES, we help you bring your vision to life and tell
+                your story in an imaginative and unique way, no matter where
+                your dream wedding takes place.
+              </p>
+            </div>
+            <div class="text-justify px-2">
+              <div>
+                <img class="mx-auto" src="offer3.png" alt="elopement" />
+              </div>
+
+              <h3
+                class="text-center my-3 text-lg font-light font-montserrat tracking-wider uppercase"
+              >
+                Elopements
+              </h3>
+              <p class="text-zinc-500 text-sm leading-6 text-center">
+                Elopements transformed into extraordinary, impactful films.
+              </p>
+              <p class="text-zinc-500 text-sm leading-6 text-center">
+                At POST-TALES, we capture the most special moments of your
+                elopement adventure and create a remarkable film that you can
+                cherish forever and share with those closest to you.
+              </p>
+            </div>
+            <div></div>
+            <div class="mx-auto my-20">
+              <p
+                class="font-dancing text-center text-zinc-500 text-4xl font-normal leading-10"
+              >
+                "Post-tales Anti-romantic, deeply emotive wedding films”
+              </p>
+            </div>
+            <div></div>
+          </div>
+        </section>
+
+        <!-- packages section -->
+
+        <section id="packages" class="flex flex-col mx-auto">
+          <div class="w-full relative h-480 text-center">
+            <img
+              class="absolute inset-0 h-full w-full object-cover"
+              src="service2.jpg"
+              alt="image of a ring"
+            />
+            <div class="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
+            <div class="relative h-full z-10">
+              <h2
+                class="py-20 text-4xl font-montserrat text-white font-bold tracking-widest uppercase"
+              >
+                They say
+              </h2>
+              <div class="flex flex-col gap-10 md:flex-row mx-10">
+                <div>
+                  <p
+                    class="text-white max-w-lg mx-auto italic text-xs lg:text-sm font-light"
+                  >
+                    "Post-tales Weddings exceeded all of our expectations! Their
+                    team captured every moment of our wedding day with such
+                    emotion and beauty. The film they created truly showcases
+                    the real essence of our relationship and our special day. We
+                    couldn't be happier with the final product and would
+                    recommend Post-tales to anyone looking for a unique and
+                    unforgettable wedding video."
+                  </p>
+
+                  <p
+                    class="text-white max-w-lg mx-auto uppercase text-xs lg:text-sm font-light pt-2 md:pt-6"
+                  >
+                    Sarah and David
+                  </p>
+                </div>
+                <div class="opacity-0 md:opacity-100">
+                  <p
+                    class="text-white max-w-lg mx-auto italic font-light text-xs lg:text-sm"
+                  >
+                    "We chose Post-tales Weddings because we wanted our wedding
+                    video to be different from the standard, cheesy films out
+                    there. And they delivered in a big way! Our film is so
+                    deeply emotive and captures the raw emotions of our wedding
+                    day perfectly. The team at Post-tales is incredibly talented
+                    and we're so grateful for the stunning, unforgettable film
+                    they created for us."
+                  </p>
+                  <p
+                    class="text-white max-w-lg mx-auto uppercase text-xs lg:text-sm font-light pt-6"
+                  >
+                    Jessica and Alex
+                  </p>
+                </div>
+                <div class="opacity-0 md:opacity-100">
+                  <p
+                    class="text-white max-w-lg mx-auto italic text-xs lg:text-sm font-light"
+                  >
+                    "Working with Post-tales Weddings was an absolute pleasure
+                    from start to finish. Their team was so professional and
+                    attentive to our needs, and they truly listened to our
+                    vision for our wedding video. The final product is more than
+                    we ever could have imagined - a beautiful, anti-romantic but
+                    deeply emotive film that we will cherish forever. Thank you,
+                    Post-tales!"
+                  </p>
+                  <p
+                    class="text-white max-w-lg mx-auto uppercase text-xs lg:text-sm font-light pt-6"
+                  >
+                    Michael and Emily
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- product package section -->
+
+          <div class="bg-zinc-900">
+            <h2
+              class="py-20 text-center text-4xl font-montserrat text-white font-bold tracking-wider uppercase"
+            >
+              Product Packages
+            </h2>
+            <div
+              class="flex flex-col md:grid grid-cols-3 mx-4 sm:mx-14 md:mx-2 md:gap-2 mb-20 lg:gap-6 lg:mx-6"
+            >
+              <div class="relative my-2">
+                <img
+                  class="absolute top-0 left-0 h-full w-full object-cover object-center"
+                  src="package1.jpg"
+                  alt="wedding image"
+                />
+                <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
+                <div
+                  class="flex flex-col h-full items-center justify-center relative py-16"
+                >
+                  <p class="text-center text-gray-50 text-xs">event</p>
+                  <h2
+                    class="text-2xl text-gray-50 text-center tracking-wider uppercase my-6"
+                  >
+                    The Essentials
+                  </h2>
+                  <div class="border-t-2 w-16 text-gray-50 pb-10"></div>
+
+                  <ul
+                    class="text-gray-200 text-xs tracking-wider leading-10 text-center"
+                  >
+                    <li>6 hours of coverage with two cameras</li>
+                    <li>Cinematic video edit of 5-7 minutes</li>
+                    <li>1-minute video edit for social media</li>
+                    <li>---</li>
+                    <li>---</li>
+                  </ul>
+                  <div class="mt-8 text-center">
+                    <a
+                      href="#form"
+                      class="bg-transparent border-2 border-white text-white uppercase py-2 px-4 transition duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-md"
+                      >Request a quote</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative my-2">
+                <img
+                  class="absolute top-0 left-0 h-full w-full object-cover object-center"
+                  src="package2.jpg"
+                  alt="preparations for a wedding"
+                />
+                <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
+                <div
+                  class="flex flex-col h-full items-center justify-center relative py-16"
+                >
+                  <p class="text-center text-gray-50 text-xs">event</p>
+                  <h2
+                    class="text-2xl text-gray-50 text-center tracking-wider uppercase my-6"
+                  >
+                    The Storyteller
+                  </h2>
+                  <div class="border-t-2 w-16 text-gray-50 pb-10"></div>
+
+                  <ul
+                    class="text-gray-200 text-xs tracking-wider leading-10 text-center"
+                  >
+                    <li>8 hours of coverage with two cameras</li>
+                    <li>Cinematic video edit of 5-7 minutes</li>
+                    <li>Documentary edit of the entire day's events</li>
+                    <li>1-minute video edit for social media</li>
+                    <li>---</li>
+                  </ul>
+                  <div class="mt-8 text-center">
+                    <a
+                      href="#form"
+                      class="bg-transparent border-2 border-white text-white uppercase py-2 px-4 transition duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-md"
+                      >Request a quote</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative my-2">
+                <img
+                  class="absolute top-0 left-0 h-full w-full object-cover object-center"
+                  src="package3.jpg"
+                  alt="wedding image"
+                />
+                <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
+                <div
+                  class="flex flex-col h-full items-center justify-center relative py-16"
+                >
+                  <p class="text-center text-gray-50 text-xs">event</p>
+                  <h2
+                    class="text-2xl text-gray-50 text-center tracking-wider uppercase my-6"
+                  >
+                    The Ultimate Experience
+                  </h2>
+                  <div class="border-t-2 w-16 text-gray-50 pb-10"></div>
+
+                  <ul
+                    class="text-gray-200 text-xs tracking-wider leading-10 text-center"
+                  >
+                    <li>10 hours of coverage with three cameras</li>
+                    <li>Cinematic video edit of 7-10 minutes</li>
+                    <li>Documentary edit of the entire day's events</li>
+                    <li>1-minute video edit for social media</li>
+                    <li>Priority delivery</li>
+                  </ul>
+                  <div class="mt-8 text-center">
+                    <a
+                      href="#form"
+                      class="bg-transparent border-2 border-white text-white uppercase py-2 px-4 transition duration-300 ease-in-out hover:bg-white hover:text-black hover:shadow-md"
+                      >Request a quote</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- contact section -->
+
+        <section id="contact">
+          <h2
+            class="font-montserrat font-bold tracking-wider text-4xl ml-12 mb-14 mt-20 uppercase"
+          >
+            CONTACT US
+          </h2>
+          <div class="flex flex-col md:grid grid-cols-2">
+            <div class="relative h-720">
+              <img
+                class="absolute inset-0 h-full w-full object-cover"
+                src="contact1.jpg"
+                alt="image of a ring"
+              />
+              <div class="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
+              <div
+                class="flex flex-col gap-12 h-full items-center justify-center relative z-10"
+              >
+                <div class="flex flex-col text-center mx-auto">
+                  <div class="mx-auto">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-12 h-12 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2
+                      class="text-gray-100 text-sm uppercase tracking-wider font-montserrat py-4"
+                    >
+                      Our location
+                    </h2>
+                    <p
+                      class="text-gray-100 text-sm uppercase tracking-wider font-montserrat"
+                    >
+                      Worldwide
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col text-center mx-auto">
+                  <div class="mx-auto">
+                    <a href="https://wa.me:17879746414">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-12 h-12 text-white"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div>
+                    <h2
+                      class="text-gray-100 text-sm uppercase tracking-wider font-montserrat py-4"
+                    >
+                      Call Us
+                    </h2>
+                    <p
+                      class="text-gray-100 text-sm uppercase tracking-wider font-montserrat"
+                    >
+                      +1 (787) 974-6414
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex flex-col text-center mx-auto">
+                  <div class="mx-auto">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-12 h-12 text-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2
+                      class="text-gray-100 text-sm uppercase tracking-wider font-montserrat py-4"
+                    >
+                      Mail
+                    </h2>
+                    <p
+                      class="text-gray-100 text-sm tracking-wider font-montserrat"
+                    >
+                      carlos@post-tales.com
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-row gap-4">
+                  <a
+                    href="https://www.facebook.com/postalestudios/"
+                    target="_blank"
+                    class="text-white text-3xl hover:text-gray-400"
+                  >
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a
+                    href="https://vimeo.com/postales"
+                    target="_blank"
+                    class="text-white text-3xl hover:text-gray-400"
+                  >
+                    <i class="fa-brands fa-vimeo-v"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/post.tales/"
+                    target="_blank"
+                    class="text-white text-3xl hover:text-gray-400"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- form -->
+
+            <div class="md:w-3/4 md:ml-10 lg:ml-28">
+              <h2
+                class="font-montserrat font-bold tracking-wider text-4xl text-center md:text-left my-10 uppercase"
+              >
+                Get in touch.
+              </h2>
+              <p
+                class="text-gray-600 max-w-lg mx-auto text-sm font-extralight tracking-wider font-sans"
+              >
+                Join us on this journey to tell your love story in a way that is
+                truly unique and unforgettable. Get in touch with POST-TALES
+                Weddings today to learn more about our services and to book your
+                wedding videography experience.
+              </p>
+              <div class="flex flex-col mt-10">
+                <form
+                  action="https://formsubmit.co/048a970dc4db4ac597c845812837fe28"
+                  method="POST"
+                  id="form"
+                >
+                  <input
+                    type="text"
+                    name="name"
+                    id=""
+                    placeholder="Name"
+                    class="w-full text-gray-600 text-sm font-extralight border-b-2 py-4 pl-4 focus:outline-none focus:border-gray-600"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id=""
+                    placeholder="Email"
+                    class="w-full text-gray-600 text-sm font-extralight border-b-2 py-4 pl-4 mt-8 focus:outline-none focus:border-gray-600"
+                    required
+                  />
+                  <textarea
+                    name="message"
+                    id=""
+                    cols="30"
+                    rows="10"
+                    placeholder="Message"
+                    class="w-full border-2 mt-10 pl-4 pt-4 text-gray-600 text-sm font-extralight focus:outline-none focus:border-gray-600"
+                    required></textarea>
+                  <input
+                    type="submit"
+                    value="Send"
+                    class="bg-transparent border-2 border-gray-600 text-gray-600 uppercase py-2 px-4 mt-6 transition duration-300 ease-in-out hover:bg-gray-800 hover:border-white hover:text-white hover:shadow-md"
+                  />
+
+                  <input type="hidden" name="_captcha" value="true" />
+                  <input type="hidden" name="_template" value="box" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- footer component -->
+
+      <Footer />
+    </main>
+
+    <script>
+      window.onload = function () {
+        function initializeVideoPlayer(
+          playBtnId: string,
+          videoId: string,
+          closeBtnId: string,
+          vimeoPlayerId: string
+        ) {
+          const playBtn = document.querySelector(`#${playBtnId}`);
+          const video = document.querySelector(`#${videoId}`);
+          const closeBtn = document.querySelector(`#${closeBtnId}`);
+          // const vimeoPlayer = document.getElementById(vimeoPlayerId);
+          const vimeoPlayer = document.querySelector(`#${vimeoPlayerId}`);
+
+          playBtn?.addEventListener("click", () => {
+            if (video !== null) {
+              video.classList.remove("hidden");
+              video.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+
+          closeBtn?.addEventListener("click", () => {
+            if (video !== null && vimeoPlayer !== null) {
+              if (vimeoPlayer instanceof HTMLIFrameElement) {
+                vimeoPlayer.contentWindow?.postMessage(
+                  JSON.stringify({ method: "pause" }),
+                  "*"
+                );
+              }
+              video.classList.add("hidden");
+            }
+          });
+        }
+
+        function slider() {
+          const $nextBtn = document.querySelector(".slider-btns .next");
+          const $prevBtn = document.querySelector(".slider-btns .prev");
+          const $slides = document.querySelectorAll(".slider-slide");
+          let counter = 0;
+
+          function changeSlide() {
+            $slides[counter].classList.remove("active");
+            counter++;
+            if (counter >= $slides.length) {
+              counter = 0;
+            }
+            $slides[counter].classList.add("active");
+          }
+
+          // Llama a la función changeSlide cada 5 segundos
+          setInterval(changeSlide, 6000);
+
+          document.addEventListener("click", (e) => {
+            if (e.target === $prevBtn) {
+              $slides[counter].classList.remove("active");
+              counter--;
+              if (counter < 0) {
+                counter = $slides.length - 1;
+              }
+              $slides[counter].classList.add("active");
+            }
+            if (e.target === $nextBtn) {
+              $slides[counter].classList.remove("active");
+              counter++;
+              if (counter >= $slides.length) {
+                counter = 0;
+              }
+              $slides[counter].classList.add("active");
+            }
+          });
+        }
+
+        // Function call for each video
+
+        initializeVideoPlayer(
+          "playBtn1",
+          "video1",
+          "closeBtn1",
+          "vimeo-player1"
+        );
+        initializeVideoPlayer(
+          "playBtn2",
+          "video2",
+          "closeBtn2",
+          "vimeo-player2"
+        );
+        initializeVideoPlayer(
+          "playBtn3",
+          "video3",
+          "closeBtn3",
+          "vimeo-player3"
+        );
+        initializeVideoPlayer(
+          "playBtn4",
+          "video4",
+          "closeBtn4",
+          "vimeo-player4"
+        );
+        initializeVideoPlayer(
+          "playBtn5",
+          "video5",
+          "closeBtn5",
+          "vimeo-player5"
+        );
+        initializeVideoPlayer(
+          "playBtn6",
+          "video6",
+          "closeBtn6",
+          "vimeo-player6"
+        );
+        initializeVideoPlayer(
+          "playBtn7",
+          "video7",
+          "closeBtn7",
+          "vimeo-player7"
+        );
+        slider();
+      };
+    </script>
+  </body>
+</html>

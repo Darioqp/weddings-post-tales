@@ -1,0 +1,22 @@
+{
+	"name": "post-tales-weddings",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"deploy": "gh-pages -d dist"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^3.0.1",
+		"@types/swiper": "^6.0.0",
+		"astro": "^2.0.16",
+		"tailwindcss": "^3.2.7"
+	},
+	"devDependencies": {
+		"gh-pages": "^5.0.0"
+	}
+}

@@ -1,0 +1,81 @@
+---
+import "../styles/Layout.css";
+---
+
+<header class="absolute top-0 w-full z-100 bg-transparent">
+  <nav
+    class="flex items-center justify-between flex-wrap p-6 border-b border-gray-200"
+  >
+    <div class="flex items-center flex-shrink-0 mr-6">
+      <img
+        class="w-20 md:w-40"
+        src="logo.png"
+        alt="weddings post-tales logo image"
+      />
+
+      <!-- <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span> -->
+    </div>
+    <div class="block md:hidden">
+      <button
+        id="boton"
+        class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-200 hover:text-gray-500 hover:border-gray-200 hover:bg-gray-200"
+      >
+        <svg
+          class="fill-current h-4 w-4"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><title>Menu</title><path
+            d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg
+        >
+      </button>
+    </div>
+    <div
+      id="menu"
+      class="w-full flex-grow md:flex md:items-center md:w-auto text-center md:text-right hidden"
+    >
+      <div class="text-sm md:flex-grow text-gray-200">
+        <a
+          href="/post-tales-weddings/"
+          class="block mt-4 md:inline-block md:mt-0 hover:text-gray-400 mr-4"
+        >
+          HOME
+        </a>
+
+        <a
+          href="/post-tales-weddings/#work"
+          class="block mt-4 md:inline-block md:mt-0 hover:text-gray-400 mr-4"
+        >
+          WORK
+        </a>
+        <a
+          href="/post-tales-weddings/#about"
+          class="block mt-4 md:inline-block md:mt-0 hover:text-gray-400 mr-4"
+        >
+          ABOUT
+        </a>
+        <a
+          href="/post-tales-weddings/#services"
+          class="block mt-4 md:inline-block md:mt-0 hover:text-gray-400 mr-4"
+        >
+          SERVICES
+        </a>
+        <a
+          href="/post-tales-weddings/#contact"
+          class="block mt-4 md:inline-block md:mt-0 hover:text-gray-400 mr-4"
+        >
+          CONTACT
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+  const boton = document.querySelector("#boton");
+  const menu = document.querySelector("#menu");
+
+  boton?.addEventListener("click", () => {
+    if (menu !== null) {
+      menu.classList.toggle("hidden");
+    }
+  });
+</script>
