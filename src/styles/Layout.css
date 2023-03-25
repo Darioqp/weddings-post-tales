@@ -49,10 +49,29 @@ html {
   margin-top: -1px;
 }
 
-
 .slider-slide.active {
   opacity: 1;
   visibility: visible;
+}
+
+/* Styles of the phrases of each slide */
+
+.phrase {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c0c0c0;
+  font-size: 4rem;
+  text-align: center;
+  display: none;
+  z-index: 100;
+  font-family: 'Dancing Script', sans-serif;
+}
+
+.slider-slide.active .phrase {
+  display: block;
+
 }
 
 
