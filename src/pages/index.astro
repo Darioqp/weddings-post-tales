@@ -887,12 +887,14 @@ import Footer from "../components/Footer.astro";
                   <h3
                     class="text-xl text-gray-50 text-center tracking-wider uppercase my-6"
                   >
-                  Tailored Packages
+                    Tailored Packages
                   </h3>
                   <p
                     class="text-gray-200 text-sm tracking-wider leading-10 text-center px-4"
                   >
-                  After getting to know all the wonderful aspects of your special day, we'll discuss our customizable packages, starting at $2,000. Then, we'll send you a personalized proposal that fits your needs.
+                    After getting to know all the wonderful aspects of your
+                    special day, we'll discuss our customizable packages. Then, we'll send you a personalized
+                    proposal that fits your needs.
                   </p>
                 </div>
               </div>
@@ -915,12 +917,15 @@ import Footer from "../components/Footer.astro";
                   <h3
                     class="text-xl text-gray-50 text-center tracking-wider uppercase my-6"
                   >
-                  Collaborative Planning
+                    Collaborative Planning
                   </h3>
                   <p
                     class="text-gray-200 text-sm tracking-wider leading-10 text-center px-4"
                   >
-                  Once you choose to work with us, we'll stay in touch throughout the entire journey, building a strong relationship to make sure we're all on the same page and aligned with your vision.
+                    Once you choose to work with us, we'll stay in touch
+                    throughout the entire journey, building a strong
+                    relationship to make sure we're all on the same page and
+                    aligned with your vision.
                   </p>
                   <div class="border-t-2 w-16 text-gray-50 my-10"></div>
                   <h2
@@ -931,12 +936,14 @@ import Footer from "../components/Footer.astro";
                   <h3
                     class="text-xl text-gray-50 text-center tracking-wider uppercase my-6"
                   >
-                  The Magical Day
+                    The Magical Day
                   </h3>
                   <p
                     class="text-gray-200 text-sm tracking-wider leading-10 text-center px-4"
                   >
-                  Rest easy knowing you're in caring, expert hands. We'll go above and beyond to ensure your experience is as stress-free and enjoyable as possible on your big day.
+                    Rest easy knowing you're in caring, expert hands. We'll go
+                    above and beyond to ensure your experience is as stress-free
+                    and enjoyable as possible on your big day.
                   </p>
                 </div>
               </div>
@@ -959,12 +966,15 @@ import Footer from "../components/Footer.astro";
                   <h3
                     class="text-xl text-gray-50 text-center tracking-wider uppercase my-6"
                   >
-                  Exciting Delivery
+                    Exciting Delivery
                   </h3>
                   <p
                     class="text-gray-200 text-sm tracking-wider leading-10 text-center px-4"
                   >
-                  When the wedding day has been beautifully captured, you can look forward to receiving an enticing teaser within 3-5 days after the event. The full, heartwarming wedding film will follow in just a few short months.
+                    When the wedding day has been beautifully captured, you can
+                    look forward to receiving an enticing teaser within 3-5 days
+                    after the event. The full, heartwarming wedding film will
+                    follow in just a few short months.
                   </p>
                   <div class="border-t-2 w-16 text-gray-50 my-10"></div>
                   <h2
@@ -975,12 +985,14 @@ import Footer from "../components/Footer.astro";
                   <h3
                     class="text-xl text-gray-50 text-center tracking-wider uppercase my-6"
                   >
-                  Cherish and Share
+                    Cherish and Share
                   </h3>
                   <p
                     class="text-gray-200 text-sm tracking-wider leading-10 text-center px-4"
                   >
-                  Take it all in—laugh, cry, and share the joy with your loved ones. This treasured keepsake will be a lasting reminder of the love you celebrated, to be cherished for a lifetime.
+                    Take it all in—laugh, cry, and share the joy with your loved
+                    ones. This treasured keepsake will be a lasting reminder of
+                    the love you celebrated, to be cherished for a lifetime.
                   </p>
                 </div>
               </div>
@@ -1229,6 +1241,8 @@ import Footer from "../components/Footer.astro";
           const $slides = document.querySelectorAll(".slider-slide");
           let counter = 0;
 
+          let isPaused = false;
+
           function changeSlide() {
             $slides[counter].classList.remove("active");
             counter++;
@@ -1260,7 +1274,9 @@ import Footer from "../components/Footer.astro";
               $slides[counter].classList.add("active");
             }
           });
+
         }
+        slider();
 
         // Function call for each video
 
@@ -1312,7 +1328,6 @@ import Footer from "../components/Footer.astro";
           "closeBtn8",
           "vimeo-player8"
         );
-        slider();
       };
     </script>
   </body>
