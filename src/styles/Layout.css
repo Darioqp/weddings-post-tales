@@ -35,18 +35,12 @@ html {
 }
 
 .slider-slide img {
+  /* width: 100%;
+  height: auto; */
   width: inherit;
   height: inherit;
   object-fit: cover;
   object-position: center center;
-}
-
-.slider-slide:nth-of-type(4) img {
-  object-position: center 1px;
-}
-
-#slide-id-4 img {
-  margin-top: -1px;
 }
 
 .slider-slide.active {
@@ -54,19 +48,14 @@ html {
   visibility: visible;
 }
 
-/* Styles of the phrases of each slide */
+/* Styles of the slogan */
 
 .phrase {
   position: absolute;
-  bottom: 10%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  color: #c0c0c0;
-  font-size: 4rem;
-  text-align: center;
-  display: none;
-  z-index: 100;
-  font-family: 'Dancing Script', sans-serif;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .slider-slide.active .phrase {
@@ -74,6 +63,15 @@ html {
 
 }
 
+@media screen and (max-width: 1024px) {
+  .phrase {
+    width: 80%; /* Ajusta este valor según el tamaño deseado en tabletas */
+  }
+}
 
-
-
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .phrase {
+    width: 60%; /* Ajusta este valor según el tamaño deseado en dispositivos móviles */
+  }
+}
